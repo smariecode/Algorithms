@@ -1,0 +1,38 @@
+Return the factorial of the provided integer.
+If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
+Factorials are often represented with the shorthand notation n!
+For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
+
+
+Using an array, I decided to use a for loop to iterate though each possibility. The array is popuated with the value 
+of the argument minus 1, which makes the starting value the actual number. It then decrements down to zero where the 
+loop will end. I return the prod variable which was a temp varaible used to mulitply each value. 
+
+function factorialize(num) {
+  var myArr = [];
+  var prod = 1;
+  
+for(i = 0; i < num; i++) {
+  myArr[i] = num - i;  // array = number minus 1, decrements the number down until zero
+  prod *= myArr[i];  //accumulated total
+}
+  return prod;
+}
+
+Once I completed this in array form I realized that I did not need to use an array. I simplified it using 
+variable prod for the math and variable tempNum to store the actual value of the argument minus 1. It 
+decreases down to zero and the loop ends when i is equal to the argument. 
+
+function factorialize(num) {
+  
+  var prod = 1;
+  var tempNum = 0;
+  
+for(i = 0; i < num; i++) {
+  tempNum = num - i;  // stores number for calculation purposes, decrements the number down to zero
+  prod *= tempNum; //accumulated total
+}
+  return prod;
+}
+
+Thoughts on improvement - Do I really need to calculate 0 and 1? Can I save memory space by doing this differently? 
