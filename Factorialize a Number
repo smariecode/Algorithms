@@ -36,3 +36,20 @@ for(i = 0; i < num; i++) {
 }
 
 Thoughts on improvement - Do I really need to calculate 0 and 1? Can I save memory space by doing this differently? 
+So, I came back through and did THIS, now I do not have to worry about doing calcs that were unnecessary!
+
+function factorialize(num) {
+  
+ var prod = 1; // holds factorial totals
+     
+ for(i = 2; i <= num; i++) {  //loop until i is equal to argument 'num'
+     prod = prod * i; //multiply and accumulate against an incrementing variable
+  }
+  
+ return prod;
+}
+
+
+
+
+
