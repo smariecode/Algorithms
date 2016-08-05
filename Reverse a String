@@ -22,7 +22,7 @@ function reverseString(str) {
     myString += myArray[count];
   }
   
-  return myString;
+  return myString; 
 }
 
 But really? I don't really need an array to do this, I can probably do a one liner here using 
