@@ -3,8 +3,8 @@ Reverse the provided string.
 You may need to turn the string into an array before you can reverse it.
 Your result must be a string.
 
-
-
+On my first passthough looking at this my brain just wanted to write an array. This is how I wrote it
+using an array method. 
 
 function reverseString(str) {
   
@@ -25,6 +25,32 @@ function reverseString(str) {
   return myString;
 }
 
-reverseString("hello");
-reverseString("Howdy");
-reverseString("Greetings from Earth");
+But really? I don't really need an array to do this, I can probably do a one liner here using 
+string methods, much simpler.
+
+function reverseString(str) {
+ 
+  var myString = str.split('').reverse().join(''); //split the string, reverse the chars, then join the chars to re-create string
+  return myString;
+}
+
+And then I thought that there must be a zillion ways to reverse a string so I tried a couple of other methods.
+
+This solution does not use any object classes, this uses decrements. 
+
+  var myString = '';
+  for (var i = str.length - 1; i >= 0; i--) // decrement until string ends
+    myString += str[i];
+  return myString;
+}
+
+And this one, which is way more complicated uses a recursive method,
+
+function reverseString(str) {
+  
+if(str === "") // for termination
+  return "";
+
+else {
+  return reverseString(str.substr(1)) + str.charAt(0); // calls the function from within the function
+ }
