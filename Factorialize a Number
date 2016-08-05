@@ -49,7 +49,14 @@ function factorialize(num) {
  return prod;
 }
 
+Now, since I am trying to learn recursion I wrote this, and am starting to understand it
 
+function factorial(num) {
+  if (num === 0) { //this will end recursion when we are done with the list of factorials
+    return 1;
+  }
+    return num * factorial(num - 1);  // recursion (5 * 4 * 3 * 2 * 1)
+}
 
 
 
