@@ -8,7 +8,7 @@ Using an array, I decided to use a for loop to iterate though each possibility. 
 of the argument minus 1, which makes the starting value the actual number. It then decrements down to zero where the 
 loop will end. I return the prod variable which was a temp varaible used to mulitply each value. 
 
-function factorialize(num) {
+function factorialize(num) { 
   var myArr = [];
   var prod = 1;
   
