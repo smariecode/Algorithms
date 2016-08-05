@@ -20,20 +20,19 @@ for(i = 0; i < num; i++) {
 }
 
 Once I completed this in array form I realized that I did not need to use an array. I simplified it using 
-variable prod for the math and variable tempNum to store the actual value of the argument minus 1. It 
-decreases down to zero and the loop ends when i is equal to the argument. 
+variable prod for the math to mulitply against the decremented argument. It decreases down to zero and the
+loop ends when i is less than the argument (the end). 
 
 function factorialize(num) {
   
   var prod = 1;
-  var tempNum = 0;
-  
-for(i = 0; i < num; i++) {
-  tempNum = num - i;  // stores number for calculation purposes, decrements the number down to zero
-  prod *= tempNum; //accumulated total
+    
+  for(i = 0; i < num; i++) {
+    prod *= num - i;  //accumulated total
 }
   return prod;
 }
+
 
 Thoughts on improvement - Do I really need to calculate 0 and 1? Can I save memory space by doing this differently? 
 So, I came back through and did THIS, now I do not have to worry about doing calcs that were unnecessary!
