@@ -1,0 +1,59 @@
+Return the factorial of the provided integer.
+If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
+Factorials are often represented with the shorthand notation n!
+For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
+
+
+Using an array, I decided to use a for loop to iterate though each possibility. The array is popuated with the value 
+of the argument minus 1, which makes the starting value the actual number. It then decrements down to zero where the 
+loop will end. I return the prod variable which was a temp varaible used to mulitply each value. 
+
+function factorialize(num) { 
+  var myArr = [];
+  var prod = 1;
+  
+for(i = 0; i < num; i++) {
+  myArr[i] = num - i;  // array = number minus 1, decrements the number down until zero
+  prod *= myArr[i];  //accumulated total
+}
+  return prod;
+}
+
+Once I completed this in array form I realized that I did not need to use an array. I simplified it using 
+variable prod for the math to mulitply against the decremented argument. It decreases down to zero and the
+loop ends when i is less than the argument (the end). 
+
+function factorialize(num) {
+  
+  var prod = 1;
+    
+  for(i = 0; i < num; i++) {
+    prod *= num - i;  //accumulated total
+}
+  return prod;
+}
+
+
+Thoughts on improvement - Do I really need to calculate 0 and 1? Can I save memory space by doing this differently? 
+So, I came back through and did THIS, now I do not have to worry about doing calcs that were unnecessary!
+
+function factorialize(num) {
+  
+ var prod = 1; // holds factorial totals
+     
+ for(i = 2; i <= num; i++) {  //loop until i is equal to argument 'num'
+     prod = prod * i; //multiply and accumulate against an incrementing variable
+  }
+  
+ return prod;
+}
+
+Now, since I am trying to learn recursion I wrote this, and am starting to understand it
+
+function factorial(num) {
+  if (num === 0) { //this will end recursion when we are done with the list of factorials
+    return 1;
+  }
+    return num * factorial(num - 1);  // recursion (5 * 4 * 3 * 2 * 1)
+}
+
