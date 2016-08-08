@@ -54,4 +54,4 @@ Do not use RegEx:
 2. When you know that other devs are going to have to read your code over and over and over again
 3. If performance is an issue
 
-Note to self - write this without RegEx
+Note to self - write this without RegEx 
