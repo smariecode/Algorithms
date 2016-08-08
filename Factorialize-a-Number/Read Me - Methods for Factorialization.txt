@@ -20,8 +20,8 @@ for(i = 0; i < num; i++) {
 }
 
 Once I completed this in array form I realized that I did not need to use an array. I simplified it using 
-variable prod for the math to mulitply against the decremented argument. It decreases down to zero and the
-loop ends when i is less than the argument (the end). 
+variable prod for the math to mulitply against the incremented argument. It increases until i is less 
+than the argument (the end). 
 
 function factorialize(num) {
   
