@@ -35,7 +35,7 @@ function reverseString(str) {
 
 And then I thought that there must be a zillion ways to reverse a string so I tried a couple of other methods.
 
-This solution does not use any object classes, this uses decrements. 
+This solution does not use any object classes, this uses decrements.  
 
   var myString = '';
   for (var i = str.length - 1; i >= 0; i--) // decrement until string ends
