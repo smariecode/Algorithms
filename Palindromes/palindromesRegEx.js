@@ -14,7 +14,6 @@ var lowerCaseString = str.replace(/[^\w\s]|_/g, "")   // removes all except alph
   
 var strippedString = lowerCaseString.split('').reverse().join(''); // reverses string for comparison
 
-
   if(strippedString === lowerCaseString) {
     return true;
   }
