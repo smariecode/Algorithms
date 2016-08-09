@@ -10,7 +10,7 @@
 
 function palindrome(str) {
   
-var regEx = /[\W_]/g;
+var regEx = /[\W_]/g; // or  /[^A-Za-z0-9]/g
   
 var lowerCaseString = str.toLowerCase().replace(regEx, "");
 var strippedString = lowerCaseString.split('').reverse().join('');
