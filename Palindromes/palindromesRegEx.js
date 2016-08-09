@@ -7,20 +7,17 @@
 // reg ex method
 
 
+
 function palindrome(str) {
   
-var lowerCaseString = str.replace(/[^\w\s]|_/g, "")   // removes all except alphanumeric characters and whitespace
-           .replace(/ /g, "").toLowerCase(); // then removes white spaces 
+var regEx = /[\W_]/g;
   
-var strippedString = lowerCaseString.split('').reverse().join(''); // reverses string for comparison
-
-  if(strippedString === lowerCaseString) {
-    return true;
-  }
-  else {
-    return false;
-  }
+var lowerCaseString = str.toLowerCase().replace(regEx, "");
+var strippedString = lowerCaseString.split('').reverse().join('');
+  
+  return lowerCaseString === strippedString;
 }
+    
 
 /*
 palindrome("eye") should return a boolean.
