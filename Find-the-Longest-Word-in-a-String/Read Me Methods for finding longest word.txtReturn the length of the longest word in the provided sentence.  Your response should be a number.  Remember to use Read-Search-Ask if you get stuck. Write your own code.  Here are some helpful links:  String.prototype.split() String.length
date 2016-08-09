@@ -6,4 +6,7 @@ Here are some helpful links:
 String.prototype.split()
 String.length
 
+Assuming from the instructions above, that I am to use .split and length, here is my first
+solution using 
+
 
