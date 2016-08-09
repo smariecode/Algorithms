@@ -7,6 +7,26 @@ String.prototype.split()
 String.length
 
 Assuming from the instructions above, that I am to use .split and length, here is my first
-solution using 
+solution. I split the string into substrings, then in a for loop, I stored the string values into an 
+array, in order to perform Math. 
 
 
+
+function findLongestWord(str) {
+  
+  var myString = str.split(' '); // seperate strings into substrings
+  var myArray = [];
+  var num = "";
+
+    for(i = 0; i < myString.length; i++) {
+    num = myString[i];
+    myArray[i] = num.length; //store length of each word in an array
+  }
+
+   var largest = Math.max.apply(Math, myArray); // use Math to find largest number
+
+  return largest;
+}
+
+Once I completed this I searched for other answers and found 2 more ways of approaching 
+this problem. 
