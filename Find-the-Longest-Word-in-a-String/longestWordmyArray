@@ -1,0 +1,24 @@
+/************************
+Return the length of the longest word in the provided sentence.
+Your response should be a number.
+
+Here are some helpful links:
+String.prototype.split()
+String.length
+************************/
+
+function findLongestWord(str) {
+  
+  var myString = str.split(' '); // seperate strings into substrings
+  var myArray = [];
+  var num = "";
+
+    for(i = 0; i < myString.length; i++) {
+    num = myString[i];
+    myArray[i] = num.length; //store length of each word in an array
+  }
+
+   var largest = Math.max.apply(Math, myArray); // use Math to find largest number
+
+  return largest;
+}
