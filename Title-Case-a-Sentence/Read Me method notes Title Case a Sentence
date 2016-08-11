@@ -1,0 +1,38 @@
+Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
+
+Here are some helpful links:
+String.prototype.split()
+
+I actually did this in under 10 minutes! I used a while loop. 
+
+My steps:
+Convert the string to lowercase and then split it into substrings.
+Declare variable i to be used in while loop.
+Capitalized the first substring (because it just will be EVERY time.
+While i is less than the string length,
+Check to see if substring is a space.
+If it is a space, increment i (to get to the next character) and then convert that next character to uppercase.
+Else, increment i and go through while loop again if not end.  
+Once all substring chars have been fed through while loop, join the substrings and return that value. 
+
+function titleCase(str) {
+  
+  str = str.toLowerCase().split(''); // convert string to lowercase then split into substrings
+  var i = 0; //for incrementing while loop
+  str[0] = str[0].toUpperCase(); //capitalize the first letter in the substring
+  
+  while(i < str.length) { // iterate through substrings until end of substrings
+    if(str[i] === ' ') { //if current substring equals a space
+      i++; //increment to get to next substring
+      str[i] = str[i].toUpperCase(); //replace current substring with capital letter
+    }
+    else {
+      i++; //if substring is not a space increment and continue at the beginning of while loop
+    }
+  }
+  
+  return str.join('');
+}
+
+Thoughts - Are there more efficient ways? More creative ways?
