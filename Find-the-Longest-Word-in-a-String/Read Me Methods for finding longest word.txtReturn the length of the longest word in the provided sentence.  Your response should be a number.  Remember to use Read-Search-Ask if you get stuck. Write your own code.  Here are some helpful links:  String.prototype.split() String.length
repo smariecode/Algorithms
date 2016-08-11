@@ -29,4 +29,4 @@ function findLongestWord(str) {
 }
 
 Once I completed this I searched for other answers and found 2 more ways of approaching 
-this problem. 
+this problem.  
