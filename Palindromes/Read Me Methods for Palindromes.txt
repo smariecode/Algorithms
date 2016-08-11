@@ -38,7 +38,7 @@ var strippedString = lowerCaseString.split('').reverse().join(''); // reverses s
   else {
     return false;
   }
-}
+} 
 
 Thoughts - Would there ever be a situation in which you could not use RegExpressions? If so, why noy? And also, how could this be
 resolved without using them? After some research, I found some cases to use RegEx and some to NOT.
