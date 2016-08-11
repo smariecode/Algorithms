@@ -35,4 +35,5 @@ function titleCase(str) {
   return str.join('');
 }
 
-Thoughts - Are there more efficient ways? More creative ways?
+Thoughts - This will NOT capitalize a word if any non whitespace chars are introduced. I will rewrite this for 
+those types of scenerios
