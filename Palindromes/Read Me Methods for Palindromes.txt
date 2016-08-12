@@ -107,4 +107,34 @@ function palindrome(str) {
  }
  return true; // Both parts are strictly equal, it returns true => The string is a palindrome
 }
+
+Now, because I like a challenge, I wrote this without using regex ON PURPOSE. It is not efficient at all, but it does work.
+
+function palindrome(str) {
+
+var alphaNumString = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var alphaNumSubString = alphaNumString.split('');  
+var val = "";
+var isPalidrome = false;
+str = str.toLowerCase().split('');
+  
+  
+for(var i = 0; i < str.length; i++) { // checks alpha string to see if str substring exists (or is it a nonalpha\nonnumber)
+  for(var count = 0; count < alphaNumString.length; count++) {
+    if(str[i] === alphaNumSubString[count]) {
+      val += str[i]; //if str substring is an alpha or a number, store it in variable val
+    }
+  }
+}
+  
+var valR = val.split('').reverse().join(''); //split val string, reverse it, then join in back together
+
+  if(val === valR) { //compare stripped string with reveresed string - check for palindromeness
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
     
