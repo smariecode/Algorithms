@@ -19,8 +19,8 @@ confirmEnding("If you want to save our world, you must hurry. We dont know how m
 
 function confirmEnding(str, target) {
   
-var tarLength = target.length;
-var strEnd = str.substr(-tarLength); 
+var tarLength = target.length;  //length of target
+var strEnd = str.substr(-tarLength);  //str with the last nth (target length to the negative)
 
   if(strEnd === target){
     return true;
