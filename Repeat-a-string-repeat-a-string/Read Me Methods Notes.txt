@@ -1,0 +1,26 @@
+Repeat a string repeat a string
+
+Repeat a given string (first argument) num times (second argument). Return an empty string if num is not a positive number.
+Remember to use Read-Search-Ask if you get stuck. Write your own code.
+Here are some helpful links:
+Global String Object
+
+I decided to use concat()
+
+
+function repeatStringNumTimes(str, num) {
+
+var myStr = "";
+
+  for(var i = 0; i < num; i++){
+    if(num > 0){ // if num is not negative
+      myStr = myStr.concat(str); // concatinate str to myStr
+    }
+    else { //if num is a negative number
+      return "";
+    }
+  }
+return myStr;
+}
+
+What are some other ways to do this?
