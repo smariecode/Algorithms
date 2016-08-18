@@ -38,7 +38,7 @@ function truncateString(str, num) {
   return str;
 }
 
-After completing this and looking at other's answers, I see I could have done this a bit differently by combining
+After completing this and looking at other methods, I see I could have done this a bit differently by combining
 these if statements like this:
 
 1) if string is longer than given max length AND max length is greater than or = to 3
