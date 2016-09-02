@@ -1,0 +1,45 @@
+You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+Remember to use Read-Search-Ask if you get stuck. Write your own code.
+Here are some helpful links:
+Arguments object
+Array.prototype.filter()
+
+Given data:
+destroyer([1, 2, 3, 1, 2, 3], 2, 3) should return [1, 1].
+destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3) should return [1, 5, 1].
+destroyer([3, 5, 1, 2, 2], 2, 3, 5) should return [1].
+destroyer([2, 3, 2, 3], 2, 3) should return [].
+destroyer(["tree", "hamburger", 53], "tree", 53) should return ["hamburger"].
+
+I really struggled with this one, arguments was not something I rememebered from my old programming days!
+I always try to solve these workbook problems without 'cheating' so it took me a couple of days to cave
+in and look for deeper help. The first thing I learned was 'argument objects' I understood it right away.
+What I had trouble with was how to return the filtered values dynamically. I was able to write nested
+For loops easy enough, but I had trouble figuring out how to return the results I needed. It turns out 
+that when I caved in and looked for help, I found that there was a delete method I was not aware of, and an
+indexOf method that I could have used. So, lack of knowledge of methods held me back on this one!
+
+Here was my final solution, using the delete method:
+
+function destroyer(arr) {
+
+  // extracts all arguments from arr
+  var args = arr.slice.call(arguments);
+  
+  // removes the first element in args because we only want the comparision numbers here
+  args.splice(0, 1);
+
+  for(var i = 0; i < arr.length; i++){
+    for(var n = 0; n < args.length; n++){
+      if(arr[i] === args[n]){ // if the first element of arr equals comparision elements
+        delete arr[i]; // remove the match from the arr
+      }
+    }
+  }
+  
+  // removes the null values that are left behind when using delete on an array
+  return arr.filter(Boolean); 
+}
+
+I will look at the use of 'indexOf' when I come back to this for deeper study.
+
