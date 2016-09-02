@@ -11,8 +11,8 @@ function destroyer(arr) {
 
   for(var i = 0; i < arr.length; i++){
     for(var n = 0; n < args.length; n++){
-      if(arr[i] === args[n]){ // if the first element of arr equals comparision elements
-        delete arr[i]; // remove the match from the arr
+      if(arr[i] === args[n]){ 
+        delete arr[i]; 
       }
     }
   }
